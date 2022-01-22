@@ -59,7 +59,7 @@ public class Q3 {
     }
 
     public static void main(String[] args) {
-        String s = "MMDCCLVI";
+        String s = "MMDCCL";
         Q3 obj3 = new Q3();
         int k = obj3.romanToInt(s);
         System.out.println(k);

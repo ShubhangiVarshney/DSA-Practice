@@ -20,7 +20,7 @@ public class ReverseString {
         }
     }
     public static void main(String[] args){
-        String s="1234321";
+        String s="DAABBD";
         ReverseString rs=new ReverseString();
         rs.Reverse(s);
     }

@@ -18,38 +18,65 @@ public class Q6 {
              ListNode list3=null;
              ListNode temp3=null;
 
-             while(temp1!=null||temp2!=null){
-                 if(temp1.val<=temp2.val || temp2==null){
-                     if(temp3==null){
-                         temp3=temp1;
-                         temp1=temp1.next;
-                         temp3.next=null;
-                         list3=temp3;
+             while(temp1!=null||temp2!=null) {
+                 if (temp1 != null && temp2 != null) {
+                     if (temp1.val <= temp2.val) {
+                         if (temp3 == null) {
+                             temp3 = temp1;
+                             temp1 = temp1.next;
+                             temp3.next = null;
+                             list3 = temp3;
 
-                     }
-                     else{
-                         temp3.next=temp1;
-                         temp1=temp1.next;
-                         temp3=temp3.next;
-                         temp3.next=null;
+                         } else {
+                             temp3.next = temp1;
+                             temp1 = temp1.next;
+                             temp3 = temp3.next;
+                             temp3.next = null;
+                         }
+                     } else if (temp1.val > temp2.val) {
+                         if (temp3 == null) {
+                             temp3 = temp2;
+                             temp2 = temp2.next;
+                             temp3.next = null;
+                             list3 = temp3;
+
+                         } else {
+                             temp3.next = temp2;
+                             temp2 = temp2.next;
+                             temp3 = temp3.next;
+                             temp3.next = null;
+                         }
                      }
                  }
-                 else if(temp1.val>temp2.val || temp1==null){
-                     if(temp3==null){
-                         temp3=temp2;
-                         temp2=temp2.next;
-                         temp3.next=null;
-                         list3=temp3;
+                 else if (temp2 == null){
+                     if (temp3 == null) {
+                         temp3 = temp1;
+                         temp1 = temp1.next;
+                         temp3.next = null;
+                         list3 = temp3;
 
-                     }
-                     else{
-                         temp3.next=temp2;
-                         temp2=temp2.next;
-                         temp3=temp3.next;
-                         temp3.next=null;
+                     } else {
+                         temp3.next = temp1;
+                         temp1 = temp1.next;
+                         temp3 = temp3.next;
+                         temp3.next = null;
                      }
                  }
+                 else if (temp1==null){
+                     if (temp3 == null) {
+                         temp3 = temp2;
+                         temp2 = temp2.next;
+                         temp3.next = null;
+                         list3 = temp3;
 
+                     } else {
+                         temp3.next = temp2;
+                         temp2 = temp2.next;
+                         temp3 = temp3.next;
+                         temp3.next = null;
+                     }
+
+                 }
              }
            return list3;
      }

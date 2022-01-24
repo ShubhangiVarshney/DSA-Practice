@@ -11,14 +11,15 @@ public class Q7 {
             if(nums[i]!=nums[j]){
                 i++;
                 nums[i]=nums[j];
+
             }
         }
-        return i+1;
+        return i;
     }
 
 
     public static void main(String[] args) {
-        int[] nums = {0, 0, 0, 1, 1, 2, 2, 2, 2, 3, 3, };
+        int[] nums = {0, 0, 0, 1, 1, 2, 2, 2, 2, 3, 3 };
         Q7 obj1 = new Q7();
         int size= obj1.removeDuplicates(nums);
         System.out.println(size);

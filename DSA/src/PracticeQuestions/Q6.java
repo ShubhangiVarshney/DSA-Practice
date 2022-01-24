@@ -35,7 +35,7 @@ public class Q6 {
                         temp3 = temp1;
                         temp1 = temp1.next;
                         temp3.next = null;
-                        list3 = temp3;
+
 
                     } else {
                         temp3.next = temp1;

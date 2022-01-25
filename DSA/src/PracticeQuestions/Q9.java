@@ -3,16 +3,28 @@ package PracticeQuestions;
 
 public class Q9 {
     public int strStr(String haystack, String needle){
-        if (haystack.contains(needle))
-            return haystack.indexOf(needle);
-        else if(!haystack.contains(needle))
+        if(needle.isEmpty())
+            return 0;
+        if(haystack.length()<needle.length())
             return -1;
+        int i;
+        for( i=0; i<=haystack.length()-needle.length(); i++){
+            int j;
+            for (j=0;j<needle.length();j++){
+                if (haystack.charAt(i+j)!=needle.charAt(j))
+                    break;
+            }
 
-        return 0;
+            if(j==needle.length())
+            return i;
+        }
+        return -1;
+
+
     }
     public static void main(String[] args){
-        String haystack="aaaaaa";
-        String needle="ba";
+        String haystack="Hello World";
+        String needle="ld";
         Q9 obj2=new Q9();
         int index=obj2.strStr(haystack,needle);
         System.out.println(index);

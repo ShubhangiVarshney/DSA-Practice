@@ -25,7 +25,7 @@ public class Q35BinarySearch {
 
     public static void main(String[] args) {
         int[] nums = new int[]{1,3,5,6};
-        int target = 2;
+        int target = 5;
         Q35BinarySearch obj1 = new Q35BinarySearch();
         int n = obj1.searchInsert(nums, target);
         System.out.println(n);

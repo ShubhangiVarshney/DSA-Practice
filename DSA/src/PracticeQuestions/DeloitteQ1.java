@@ -15,10 +15,10 @@ public class DeloitteQ1 {
         String p="";
         for (int i=0; i< s.length(); i++){
             if(s.charAt(i)==' ')
-                System.out.println();
+               System.out.println();
             p=s.charAt(i)+p;
         }
-        System.out.print(p);
+        System.out.println(p);
     }
     public static void main(String[] args){
         String s=",ignahbuhs yenhsrav";

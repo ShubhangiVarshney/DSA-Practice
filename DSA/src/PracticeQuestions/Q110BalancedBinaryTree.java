@@ -15,7 +15,7 @@ public class Q110BalancedBinaryTree {
           this.right = right;
       }
    }
-    public boolean isBalanced(TreeNode root) {
+    public boolean isBalancedIterativeIncorrect(TreeNode root) {
         int level=0;
         int min=0;
         int size=0;
@@ -52,7 +52,22 @@ public class Q110BalancedBinaryTree {
 
         else
             return true;
+    }
+
+    public boolean isBalanced (TreeNode root){
+        if(root==null)
+            return true;
+
+        return Math.abs(height(root.left)-height(root.right))<2 && isBalanced(root.left) && isBalanced(root.right);
+    }
+
+    public int height(TreeNode root){
+        if (root==null)
+            return 1;
+        return Math.max(height(root.left),height(root.right))+1;
+    }
+
 
 
     }
-}
+

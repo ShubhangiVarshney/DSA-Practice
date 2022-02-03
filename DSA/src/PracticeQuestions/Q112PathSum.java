@@ -27,21 +27,23 @@ public class Q112PathSum {
         if (root == null)
             return false;
 
-        if(root.left==null && root.right==null){
-            sum=root.val;
-            if (sum==targetSum)
-                return true;
-            else
-                return false;
-        }
+
 
         return sumPath(root, targetSum, sum) ;
     }
 
     public boolean sumPath(TreeNode root, int targetSum, int sum) {
         sum = sum + root.val;
-        if (sum==targetSum)
-            return true;
+
+        if(root.left==null && root.right==null){
+
+            if (sum==targetSum)
+                return true;
+            else
+                return false;
+        }
+
+        return sumPath(root.left, targetSum, sum) || sumPath(root.right, targetSum, sum) ;
 
     }
 }

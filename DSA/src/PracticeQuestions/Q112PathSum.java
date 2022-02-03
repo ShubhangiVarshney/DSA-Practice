@@ -33,6 +33,8 @@ public class Q112PathSum {
     }
 
     public boolean sumPath(TreeNode root, int targetSum, int sum) {
+        if (root == null)
+            return false;
         sum = sum + root.val;
 
         if(root.left==null && root.right==null){

@@ -27,8 +27,6 @@ public class Q112PathSum {
         if (root == null)
             return false;
 
-
-
         return sumPath(root, targetSum, sum) ;
     }
 

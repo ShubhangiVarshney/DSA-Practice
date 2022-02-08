@@ -4,7 +4,7 @@ public class Approx {
     public int perecentage(int[] arr){
         int min=0;
         int max=0;
-        double divide=0d;
+        double divide=0;
 
         for (int i=0; i<arr.length;i++ ){
             if(i==0){
@@ -28,7 +28,7 @@ public class Approx {
         }
 
         public static void main(String[] args ){
-        int[] arr={65,68,72,59,72,0};
+        int[] arr={65,68,72,59,72};
         Approx ap=new Approx();
         int i=ap.perecentage(arr);
         System.out.println(i);

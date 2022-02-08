@@ -1,6 +1,6 @@
 package PracticeQuestions;
 
-public class Approx {
+public class CodeSignalQ1Approx {
     public int perecentage(int[] arr){
         int min=0;
         int max=0;
@@ -29,7 +29,7 @@ public class Approx {
 
         public static void main(String[] args ){
         int[] arr={65,68,72,59,72};
-        Approx ap=new Approx();
+        CodeSignalQ1Approx ap=new CodeSignalQ1Approx();
         int i=ap.perecentage(arr);
         System.out.println(i);
 

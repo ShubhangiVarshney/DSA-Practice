@@ -2,9 +2,10 @@ package PracticeQuestions;
 
 public class CodeSignalSlidingWindow {
     public static void SlideWindow(int[][] arr){
-        for (int i=1; i<arr.length; i++){
-            for (int j=1; j<arr[i].length; j++){
-                System.out.print(" "+arr[i][j]);
+        for (int i=0; i<arr.length-1; i++){
+            for (int j=0; j<arr[i].length-1; j++){
+                System.out.print(" "+arr[i][j]+" "+arr[i][j+1]);
+                System.out.print(" "+arr[i+1][j]+" "+arr[i+1][j+1]);
             }
             System.out.println();
         }

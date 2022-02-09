@@ -11,12 +11,12 @@ public class CodeSignalQ3TeleportsObstacles {
         for (int i=0; i<obstacles.length; i++){
                 obs.add(obstacles[i][0]+"_"+obstacles[i][1]);
             }
-        System.out.print(obs);
+        System.out.println("Obstacles: "+obs);
 
         for (int j=0; j<teleport.length; j++){
             tele.put(teleport[j][0]+"_"+teleport[j][1],Arrays.asList(teleport[j][2],teleport[j][3]));
         }
-        System.out.print(tele);
+        System.out.println("Teleports mapping:"+tele);
 
         int x=0;
         int y=0;
@@ -49,9 +49,9 @@ public class CodeSignalQ3TeleportsObstacles {
     }
 
     public static void main(String args[]){
-        int[][] obstacles= {{1,0},{2,0}};
-        int[][] teleport={{0,1,1,1},{1,2,0,2},{0,3,2,1}};
-        int n=3; int m=4;
+        int[][] obstacles= {{2,1}};
+        int[][] teleport={{0,1,2,0}};
+        int n=3; int m=3;
         boolean result=labyrinthEscape(n,m,obstacles,teleport);
         System.out.println(result);
     }

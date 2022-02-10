@@ -1,3 +1,5 @@
+package Searching;
+
 public class BinarySearchAlgo {
     public boolean BinarySearch(int n, int[] arr){
         int length=arr.length;
@@ -12,8 +14,8 @@ public class BinarySearchAlgo {
                 System.out.println("right="+right);}
                 else {
                  left=middleIndex+1;
-                System.out.println("left="+left);}
-
+                System.out.println("left="+left);
+                }
             }
         return false;
     }

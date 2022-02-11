@@ -3,7 +3,7 @@ package Searching;
 public class JumpSearchAlgo {
     public int JumpSearch(int[] arr, int num){
         int len=arr.length;
-        int block=(int)Math.sqrt(len);
+        int block= (int)Math.sqrt(len);
         int highIndex=block;
         System.out.println(block);
 
@@ -19,11 +19,11 @@ public class JumpSearchAlgo {
     }
 
     public static void main(String[] args){
-        int[] arr={0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377};
-        int num=55;
+        int[] arr={0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610};
+        int num=377;
         JumpSearchAlgo js=new JumpSearchAlgo();
         int index=js.JumpSearch(arr,num);
-        if (index>0)
+        if (index!=-1)
             System.out.println("Element found at: "+index);
         else
             System.out.println("Element not found");

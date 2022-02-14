@@ -30,7 +30,7 @@ import java.util.*;
                  key=target-nums[j];
                  n=hm.get(key);
 
-                 if (n!=null&&n!=0&&nums[j]!=key)
+                 if (n!=null&&n!=0&&j!=n)
                      break;
 
              }
@@ -40,7 +40,7 @@ import java.util.*;
         }
 
         public static void main(String[] args){
-            int[] arr={1,3,2,4};
+            int[] arr={3,2,4};
             int target=6;
             Q1 obj=new Q1();
             obj.twoSum1(arr,target);

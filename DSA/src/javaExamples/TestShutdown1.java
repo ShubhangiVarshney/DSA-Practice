@@ -14,6 +14,6 @@ public class TestShutdown1{
         r.addShutdownHook(th1);
 
         System.out.println("Now main sleeping... press ctrl+c to exit");
-        try{Thread.sleep(3000000);}catch (Exception e) {}
+        try{Thread.sleep(300);}catch (Exception e) {}
     }
 }

@@ -1,4 +1,6 @@
 package javaExamples;
+import java.lang.Thread;
+
 
 public class TestJoin2 extends Thread {
     public void run(){

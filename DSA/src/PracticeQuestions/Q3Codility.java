@@ -4,9 +4,16 @@ package PracticeQuestions;
 // O & 0  can be same
 // same number or character not together
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Q3Codility {
     public boolean[] solution(String[] plates) {
         // write your code in Java 11
+        HashMap<Integer,Integer> map1=new HashMap<>();
+        for (HashMap.Entry m:map1.entrySet()){
+
+        }
         if (plates == null)
             return null;
         boolean[] res = new boolean[plates.length];

@@ -17,7 +17,6 @@ public class Q2Codility {
               driverData += driver.getMonthsSinceLastAccident()==-1 || driver.getMonthsSinceLastAccident()>60;
               driverData += "," ;
               driverData +=  (driver.getCurrentOdometer()-driver.getOdometeFrom6MonthsPrior())<5000 && driver.getOdometeFrom6MonthsPrior()>0;
-              System.out.println("mileage: "+ driver.getCurrentOdometer()+" "+driver.getOdometeFrom6MonthsPrior());
               driverData += "," ;
               driverData += driver.getDriverAge()>55;
               result[index]=driverData;
@@ -83,6 +82,8 @@ class Driver {
     public Boolean getSafetyCourseTaken() {
         return this.safetyCourseTaken;
     }
+
+
     public static void main (String[] args){
         Q2Codility q2=new Q2Codility();
          String[] arr={"Alpha,15,0,3000,-1,true", "Beta,22,0,3500,0,FALSE", "Gamma,88,1,50000,60,FALSE", "Delta,75,,175,4,FALSE"};

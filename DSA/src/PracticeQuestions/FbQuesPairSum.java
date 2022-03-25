@@ -31,12 +31,12 @@ class Main {
             int val = k - arr[j];
             if ((k % 2 == 0 && arr[j] != k / 2) || k % 2 != 0) {
                 if (elementsMap.containsKey(val)) {
-                    numberOfPairsUnique = elementsMap.get(val);
+                    numberOfPairsUnique = numberOfPairsUnique + elementsMap.get(val);
                 }
             } else if ((k % 2 == 0 && arr[j] == k / 2)) {
                 sameValueCount = elementsMap.get(val);
                 if (sameValueCount > 1) {
-                    numberOfPairsSame = factorial(sameValueCount) / ((factorial(sameValueCount - 2)) * 2);
+                    numberOfPairsSame = numberOfPairsSame + factorial(sameValueCount) / ((factorial(sameValueCount - 2)) * 2);
                 }
             }
         }

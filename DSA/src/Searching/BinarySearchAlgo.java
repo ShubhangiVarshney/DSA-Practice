@@ -11,8 +11,9 @@ public class BinarySearchAlgo {
                 return true;
             else if(n<number){
                 right=middleIndex-1;
-                System.out.println("right="+right);}
-                else {
+                System.out.println("right="+right);
+            }
+            else {
                  left=middleIndex+1;
                 System.out.println("left="+left);
                 }

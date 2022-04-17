@@ -2,7 +2,7 @@ package PracticeQuestions;
 
 public class Q231PowerOfTwo {
     public boolean isPowerOfTwo(int n) {
-        if (n==0 || n<0){
+        if (n<=0){
             return false;
         }
         if (n==1) {
